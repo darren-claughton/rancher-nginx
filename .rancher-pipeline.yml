@@ -10,13 +10,13 @@ stages:
   - runScriptConfig:
       image: busybox
       shellScript: docker push 319701921293.dkr.ecr.eu-west-1.amazonaws.com/nginx:${CICD_EXECUTION_SEQUENCE}
-  when:
-    branch:
-      include:
-      - master
-    event:
-      include:
-      - push
-      - pull_request
+#  when:
+#    branch:
+#      include:
+#      - master
+#    event:
+#      include:
+#      - push
+#      - pull_request
 timeout: 60
 notification: {}
