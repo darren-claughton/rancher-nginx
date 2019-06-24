@@ -3,8 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: busybox
-      shellScript: docker build 319701921293.dkr.ecr.eu-west-1.amazonaws.com/nginx:${CICD_EXECUTION_SEQUENCE}
-        .
+      shellScript: docker build 319701921293.dkr.ecr.eu-west-1.amazonaws.com/nginx:${CICD_EXECUTION_SEQUENCE} .
   - runScriptConfig:
       image: busybox
       shellScript: eval $(aws ecr get-login --region eu-west-1 | sed 's/-e none//')
